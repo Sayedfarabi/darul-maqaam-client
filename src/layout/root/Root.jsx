@@ -9,7 +9,7 @@ const Root = () => {
             <section>
                 <Navbar></Navbar>
             </section>
-            <section>
+            <section className='min-h-screen'>
                 <Outlet></Outlet>
             </section>
             <section>

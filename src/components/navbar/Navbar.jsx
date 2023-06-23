@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import logo from '../../assets/images/brand/logo.png';
-import { GrMail, GrFacebookOption, GrYoutube } from 'react-icons/gr';
+import { GrMail, GrFacebookOption, GrYoutube, GrContactInfo, GrGallery, GrProjects, GrHomeRounded } from 'react-icons/gr';
 import { BsTelephoneFill } from 'react-icons/bs';
 import { ImMobile2 } from 'react-icons/im';
+import { BiNews } from 'react-icons/bi';
+import { MdOutlineRoundaboutRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isLanEng, setIsLanEng] = useState(true);
     return (
-        <section>
+        <section className='px-2 md:px-4 lg:px-6'>
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -23,12 +25,29 @@ const Navbar = () => {
                                     <img src={logo} className='w-40 h-20' alt="" />
                                 </Link>
                             </li>
-                            <li><Link to={"/"}>Home</Link></li>
-                            <li><Link to={"/about"}>About</Link></li>
-                            <li><Link to={"/projects"}>Projects</Link></li>
-                            <li><Link to={"/gallery"}>Gallery</Link></li>
-                            <li><Link to={"/news"}>News</Link></li>
-                            <li><Link to={"/contact"}>Contact</Link></li>
+                            <li><Link to={"/"}>
+                                <GrHomeRounded className='inline mr-3 text-green-600'></GrHomeRounded>
+                                Home
+                            </Link></li>
+                            <li><Link to={"/about"}>
+                                <MdOutlineRoundaboutRight className='inline mr-3'></MdOutlineRoundaboutRight>
+                                About</Link></li>
+                            <li><Link to={"/projects"}>
+                                <GrProjects className='inline mr-3'></GrProjects>
+                                Projects
+                            </Link></li>
+                            <li><Link to={"/gallery"}>
+                                <GrGallery className='inline mr-3'></GrGallery>
+                                Gallery
+                            </Link></li>
+                            <li><Link to={"/news"}>
+                                <BiNews className='inline mr-3'></BiNews>
+                                News
+                            </Link></li>
+                            <li><Link to={"/contact"}>
+                                <GrContactInfo className='inline mr-3'></GrContactInfo>
+                                Contact
+                            </Link></li>
                         </ul>
 
 
@@ -62,7 +81,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='navbar-center hidden lg:flex flex-col'>
-                    <div className='text-xs font-semibold flex'>
+                    <div className='text-xs font-semibold flex justify-center items-end'>
                         <p className='mr-3'>
                             <ImMobile2 className='text-green-600 inline'></ImMobile2>
                             <span>+8801918-390119</span>
