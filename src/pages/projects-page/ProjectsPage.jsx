@@ -1,9 +1,22 @@
 import React from 'react';
+import OurProject from '../../components/our-project/OurProject';
+import Projects from '../../components/projects/Projects';
+import Publication from '../../components/publication/Publication';
+import InputSection from '../../components/input-section/InputSection';
+import VideoSection from '../../components/video-section/VideoSection';
+import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
 
 const ProjectsPage = () => {
     return (
         <section>
-            <h1>This is  Project Page </h1>
+            <OurProject></OurProject>
+            <Projects></Projects>
+            <div className='py-8 bg-green-50'>
+                <InputSection></InputSection>
+                <Publication></Publication>
+                <VideoSection></VideoSection>
+            </div>
+            <SponsorsSection></SponsorsSection>
         </section>
     );
 };

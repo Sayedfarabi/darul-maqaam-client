@@ -1,9 +1,12 @@
 import React from 'react';
+import ProjectGallerySection from '../../components/project-gallery-section/ProjectGallerySection';
+import ImagesSection from '../../components/images-section/ImagesSection';
 
 const Gallery = () => {
     return (
         <section>
-            <h1>This is  Gallery page</h1>
+            <ProjectGallerySection></ProjectGallerySection>
+            <ImagesSection></ImagesSection>
         </section>
     );
 };
