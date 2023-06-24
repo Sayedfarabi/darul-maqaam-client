@@ -6,8 +6,10 @@ import { BiSolidLocationPlus, BiLogoLinkedin } from 'react-icons/bi';
 import { FaRegHandPointRight } from 'react-icons/fa';
 
 import logo from '../../assets/images/brand/logo(1).png';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <section className='bg-green-500 py-8 md:py-12 px-2 md:px-6 lg:px-12 text-white'>
             <footer className='grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4'>
@@ -15,21 +17,16 @@ const Footer = () => {
                 <div className='mx-auto'>
                     <img src={logo} className='w-54 h-28' alt="logo" />
                     <p className='text-xs pr-0 md:pr-4'>
-                        Darul Maqaam Foundation is a renowned law firm in Dhaka,
-                        Bangladesh. We are providing and dealing with all sorts of legal
-                        and professional services and matters to operate with the comp -
-                        anies act.
+                        {t("brandContent")}
                     </p>
                 </div>
                 <div className='mx-auto text-xs leading-loose w-full'>
-                    <p className="text-lg md:text-2xl font-semibold tracking-wider mb-2 text-center">Contact Us</p>
+                    <p className="text-lg md:text-2xl font-semibold tracking-wider mb-2 text-center">{t("contactUs")}</p>
                     <p>
                         <BiSolidLocationPlus className='inline mr-2 text-base'></BiSolidLocationPlus>
                         <a href='https://' className="link link-hover">
 
-                            Tropical Alauddin Tower (11th Floor, Flat:11-B),
-                            Holding No. - 32/C, Road - 02, Sector - 03,
-                            Uttara, Dhaka - 1230, Bangladesh
+                            {t("address")}
                         </a>
                     </p>
                     <p>
@@ -55,7 +52,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className='mx-auto text-xs leading-loose w-full'>
-                    <p className="text-lg md:text-2xl font-semibold tracking-wider mb-2 text-center">Usefull Links</p>
+                    <p className="text-lg md:text-2xl font-semibold tracking-wider mb-2 text-center">{t("usefullLink")}</p>
                     <p>
                         <FaRegHandPointRight className='inline mr-6 text-base'></FaRegHandPointRight>
                         <a href='https://' className="link link-hover">
@@ -65,51 +62,61 @@ const Footer = () => {
                     <p>
                         <FaRegHandPointRight className='inline mr-6 text-base'></FaRegHandPointRight>
                         <a href='https://' className="link link-hover">
-                            Clients
+                            {t("client")}
                         </a>
                     </p>
                     <p>
                         <FaRegHandPointRight className='inline mr-6 text-base'></FaRegHandPointRight>
                         <a href='https://' className="link link-hover">
-                            Internship
+                            {t("internship")}
                         </a>
                     </p>
                     <p>
                         <FaRegHandPointRight className='inline mr-6 text-base'></FaRegHandPointRight>
                         <a href='https://' className="link link-hover">
-                            Blog
+                            {t("blog")}
                         </a>
                     </p>
                     <p>
                         <FaRegHandPointRight className='inline mr-6 text-base'></FaRegHandPointRight>
                         <a href='https://' className="link link-hover">
-                            Rahamat & Associates Limited
+                            {t("companyName")}
                         </a>
                     </p>
                 </div>
                 <div className='mx-auto  text-xs leading-loose w-full'>
                     <p className="text-lg md:text-2xl font-semibold tracking-wider mb-2 text-center">
-                        {"Let’s connect"}
+                        {t("letsContact")}
                     </p>
                     <p>
                         <GrFacebookOption className='inline mr-6 text-base'></GrFacebookOption>
-                        <a href='https://' className="link link-hover">Facebook</a>
+                        <a href='https://' className="link link-hover">
+                            {t("facebook")}
+                        </a>
                     </p>
                     <p>
                         <BiLogoLinkedin className='inline mr-6 text-base'></BiLogoLinkedin>
-                        <a href='https://' className="link link-hover">Linkedin</a>
+                        <a href='https://' className="link link-hover">
+                            {t("linkedIn")}
+                        </a>
                     </p>
                     <p>
                         <GrInstagram className='inline mr-6 text-base'></GrInstagram>
-                        <a href='https://' className="link link-hover">Instagram</a>
+                        <a href='https://' className="link link-hover">
+                            {t("instagram")}
+                        </a>
                     </p>
                     <p>
                         <GrYoutube className='inline mr-6 text-base'></GrYoutube>
-                        <a href='https://' className="link link-hover">Youtube</a>
+                        <a href='https://' className="link link-hover">
+                            {t("youtube")}
+                        </a>
                     </p>
                     <p>
                         <GrMail className='inline mr-6 text-base'></GrMail>
-                        <a href='https://' className="link link-hover">Webmail</a>
+                        <a href='https://' className="link link-hover">
+                            {t("webmail")}
+                        </a>
                     </p>
                 </div>
 

@@ -1,9 +1,10 @@
 import React from 'react';
+import MakeThemSmile from '../../components/make-them-smile/MakeThemSmile';
 
 const HomePage = () => {
     return (
         <section>
-            <h1>This is homepage</h1>
+            <MakeThemSmile></MakeThemSmile>
         </section>
     );
 };

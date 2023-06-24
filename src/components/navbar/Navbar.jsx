@@ -6,9 +6,18 @@ import { ImMobile2 } from 'react-icons/im';
 import { BiNews } from 'react-icons/bi';
 import { MdOutlineRoundaboutRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import i18next from "i18next"
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
-    const [isLanEng, setIsLanEng] = useState(true);
+    const [Lan, setLan] = useState("en");
+    const [activeRoute, setActiveRoute] = useState("home");
+    const { t } = useTranslation();
+    const toggleHandle = (e) => {
+        setLan(e)
+        i18next.changeLanguage(e)
+        console.log(e);
+    }
     return (
         <section className='px-2 md:px-4 lg:px-6'>
             <div className="navbar">
@@ -27,26 +36,27 @@ const Navbar = () => {
                             </li>
                             <li><Link to={"/"}>
                                 <GrHomeRounded className='inline mr-3 text-green-600'></GrHomeRounded>
-                                Home
+                                <p className='hover:text-green-600'>Home</p>
                             </Link></li>
                             <li><Link to={"/about"}>
                                 <MdOutlineRoundaboutRight className='inline mr-3'></MdOutlineRoundaboutRight>
-                                About</Link></li>
+                                <p className='hover:text-green-600'>About</p>
+                            </Link></li>
                             <li><Link to={"/projects"}>
                                 <GrProjects className='inline mr-3'></GrProjects>
-                                Projects
+                                <p className='hover:text-green-600'>Projects</p>
                             </Link></li>
                             <li><Link to={"/gallery"}>
                                 <GrGallery className='inline mr-3'></GrGallery>
-                                Gallery
+                                <p className='hover:text-green-600'>Gallery</p>
                             </Link></li>
                             <li><Link to={"/news"}>
                                 <BiNews className='inline mr-3'></BiNews>
-                                News
+                                <p className='hover:text-green-600'>News</p>
                             </Link></li>
                             <li><Link to={"/contact"}>
                                 <GrContactInfo className='inline mr-3'></GrContactInfo>
-                                Contact
+                                <p className='hover:text-green-600'>Contact</p>
                             </Link></li>
                         </ul>
 
@@ -54,7 +64,7 @@ const Navbar = () => {
 
                     </div>
                     <div>
-                        <Link to={"/"} className="hidden lg:inline">
+                        <Link onClick={() => setActiveRoute("home")} to={"/"} className="hidden lg:inline">
                             <img src={logo} className='w-52 h-28' alt="" />
                         </Link>
                     </div>
@@ -99,13 +109,25 @@ const Navbar = () => {
                         </p>
                     </div>
                     <div>
-                        <ul className="menu menu-horizontal px-1 font-semibold text-lg">
-                            <li><Link to={"/"}>Home</Link></li>
-                            <li><Link to={"/about"}>About</Link></li>
-                            <li><Link to={"/projects"}>Projects</Link></li>
-                            <li><Link to={"/gallery"}>Gallery</Link></li>
-                            <li><Link to={"/news"}>News</Link></li>
-                            <li><Link to={"/contact"}>Contact</Link></li>
+                        <ul className="flex justify-evenly items-center px-1 font-semibold text-lg">
+                            <li className='mx-4 my-4'><Link to={"/"}>
+                                <p onClick={() => setActiveRoute("home")} className={`${(activeRoute === "home") && "text-green-600"} hover:text-green-600`}>{t("home")}</p>
+                            </Link></li>
+                            <li className='mx-4 my-4'><Link to={"/about"}>
+                                <p onClick={() => setActiveRoute("about")} className={`${(activeRoute === "about") && "text-green-600"} hover:text-green-600`}>{t("about")}</p>
+                            </Link></li>
+                            <li className='mx-4 my-4'><Link to={"/projects"}>
+                                <p onClick={() => setActiveRoute("projects")} className={`${(activeRoute === "projects") && "text-green-600"} hover:text-green-600`}>{t("projects")}</p>
+                            </Link></li>
+                            <li className='mx-4 my-4'><Link to={"/gallery"}>
+                                <p onClick={() => setActiveRoute("gallery")} className={`${(activeRoute === "gallery") && "text-green-600"} hover:text-green-600`}>{t("gallery")}</p>
+                            </Link></li>
+                            <li className='mx-4 my-4'><Link to={"/news"}>
+                                <p onClick={() => setActiveRoute("news")} className={`${(activeRoute === "news") && "text-green-600"} hover:text-green-600`}>{t("news")}</p>
+                            </Link></li>
+                            <li className='mx-4 my-4'><Link to={"/contact"}>
+                                <p onClick={() => setActiveRoute("contact")} className={`${(activeRoute === "contact") && "text-green-600"} hover:text-green-600`}>{t("contact")}</p>
+                            </Link></li>
                         </ul>
                     </div>
                 </div>
@@ -121,15 +143,15 @@ const Navbar = () => {
                             </div>
                             <div className='font-bold text-sm bg-green-500 rounded-lg'>
 
-                                <button onClick={() => setIsLanEng(true)} className={`mr-1 rounded-lg ${isLanEng && "bg-gray-200"} px-2`}>EN</button>
-                                <button onClick={() => setIsLanEng(false)} className={`rounded-lg ${!isLanEng && "bg-gray-200"} px-2`}>BAN</button>
+                                <button onClick={() => toggleHandle("en")} className={`mr-1 rounded-lg ${(Lan === "en") && "bg-gray-200"} px-2`}>EN</button>
+                                <button onClick={(e) => toggleHandle("bn")} className={`rounded-lg ${(Lan === "bn") && "bg-gray-200"} px-2`}>BAN</button>
                             </div>
                         </div>
                     </div>
 
                     <div className='my-4 py-1'>
                         <div>
-                            <button className='capitalize px-4 py-1 text-sm text-white bg-green-600 rounded-lg'>My Account</button>
+                            <button className='capitalize px-4 py-1 text-sm text-white bg-green-600 rounded-lg'>{t("myAccount")}</button>
                         </div>
                     </div>
 
