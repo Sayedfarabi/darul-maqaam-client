@@ -66,7 +66,9 @@ const Projects = () => {
                     data.map(data => {
                         return <ProjectCard
                             key={data?._id}
-                            data={data}>
+                            data={data}
+                            btnData={"Donate"}
+                            btnLink={"/"}>
 
                         </ProjectCard>
                     })

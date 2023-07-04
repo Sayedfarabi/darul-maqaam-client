@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ data }) => {
+const ProjectCard = ({ data, btnData, btnLink }) => {
     return (
         <div className='mx-auto'>
             <div className='h-full flex flex-col justify-between w-full'>
@@ -18,9 +19,11 @@ const ProjectCard = ({ data }) => {
                     </div>
                 </div>
                 <div className='mt-4'>
-                    <button className='py-1 px-4 font-semibold text-white bg-green-600 capitalize text-xl md:text-3xl'>
-                        Donate
-                    </button>
+                    <Link to={btnLink}>
+                        <button className='py-1 px-4 text-white bg-green-600 capitalize text-xl md:text-2xl'>
+                            {btnData}
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
