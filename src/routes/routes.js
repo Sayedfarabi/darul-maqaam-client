@@ -8,6 +8,9 @@ import NewsPage from "../pages/news-page/NewsPage";
 import ContactPage from "../pages/contact-page/ContactPage";
 import Gallery from "../pages/gallery-page/Gallery";
 import SignInPage from "../pages/sign-in-page/SignInPage";
+import Dashboard from "../dashboard/pages/Dashboard";
+import Main from "../layout/dashboard/Main";
+import Shop from "../pages/shop-page/Shop";
 
 export const routes = createBrowserRouter([
     {
@@ -36,13 +39,29 @@ export const routes = createBrowserRouter([
                 element: <NewsPage></NewsPage>
             },
             {
+                path: "/shop",
+                element: <Shop></Shop>
+            },
+            {
                 path: "/contact",
                 element: <ContactPage></ContactPage>
             },
             {
                 path: "/signIn",
                 element: <SignInPage></SignInPage>
+            },
+
+        ]
+    },
+    {
+        path: "/dashboard",
+        element: <Main></Main>,
+        children: [
+            {
+                path: "/dashboard",
+                errorElement: <ErrorPage></ErrorPage>,
+                element: <Dashboard></Dashboard>
             }
         ]
-    }
+    },
 ])

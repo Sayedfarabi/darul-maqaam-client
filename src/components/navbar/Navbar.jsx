@@ -4,6 +4,7 @@ import { GrMail, GrFacebookOption, GrYoutube, GrContactInfo, GrGallery, GrProjec
 import { BsTelephoneFill } from 'react-icons/bs';
 import { ImMobile2 } from 'react-icons/im';
 import { BiNews } from 'react-icons/bi';
+import { AiFillDashboard, AiFillShopping } from 'react-icons/ai';
 import { MdOutlineRoundaboutRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import i18next from "i18next"
@@ -36,27 +37,37 @@ const Navbar = () => {
                             </li>
                             <li><Link to={"/"}>
                                 <GrHomeRounded className='inline mr-3 text-green-600'></GrHomeRounded>
-                                <p className='hover:text-green-600'>Home</p>
+                                <p onClick={() => setActiveRoute("home")} className={`${(activeRoute === "home") && "text-green-600"} hover:text-green-600`}>{t("home")}</p>
                             </Link></li>
                             <li><Link to={"/about"}>
                                 <MdOutlineRoundaboutRight className='inline mr-3'></MdOutlineRoundaboutRight>
-                                <p className='hover:text-green-600'>About</p>
+                                <p onClick={() => setActiveRoute("about")} className={`${(activeRoute === "about") && "text-green-600"} hover:text-green-600`}>{t("about")}</p>
                             </Link></li>
                             <li><Link to={"/projects"}>
                                 <GrProjects className='inline mr-3'></GrProjects>
-                                <p className='hover:text-green-600'>Projects</p>
-                            </Link></li>
+                                <p onClick={() => setActiveRoute("projects")} className={`${(activeRoute === "projects") && "text-green-600"} hover:text-green-600`}>{t("projects")}</p>
+                            </Link>
+                            </li>
+                            <li><Link to={"/shop"}>
+                                <AiFillShopping className='inline mr-3'></AiFillShopping>
+                                <p onClick={() => setActiveRoute("shop")} className={`${(activeRoute === "shop") && "text-green-600"} hover:text-green-600`}>{t("shop")}</p>
+                            </Link>
+                            </li>
                             <li><Link to={"/gallery"}>
                                 <GrGallery className='inline mr-3'></GrGallery>
-                                <p className='hover:text-green-600'>Gallery</p>
+                                <p onClick={() => setActiveRoute("gallery")} className={`${(activeRoute === "gallery") && "text-green-600"} hover:text-green-600`}>{t("gallery")}</p>
                             </Link></li>
                             <li><Link to={"/news"}>
                                 <BiNews className='inline mr-3'></BiNews>
-                                <p className='hover:text-green-600'>News</p>
+                                <p onClick={() => setActiveRoute("news")} className={`${(activeRoute === "news") && "text-green-600"} hover:text-green-600`}>{t("news")}</p>
                             </Link></li>
                             <li><Link to={"/contact"}>
                                 <GrContactInfo className='inline mr-3'></GrContactInfo>
-                                <p className='hover:text-green-600'>Contact</p>
+                                <p onClick={() => setActiveRoute("contact")} className={`${(activeRoute === "contact") && "text-green-600"} hover:text-green-600`}>{t("contact")}</p>
+                            </Link></li>
+                            <li><Link to={"/dashboard"}>
+                                <AiFillDashboard className='inline mr-3'></AiFillDashboard>
+                                <p onClick={() => setActiveRoute("dashboard")} className={`${(activeRoute === "dashboard") && "text-green-600"} hover:text-green-600`}>{t("dashboard")}</p>
                             </Link></li>
                         </ul>
 
@@ -110,24 +121,53 @@ const Navbar = () => {
                     </div>
                     <div>
                         <ul className="flex justify-evenly items-center px-1 font-semibold text-lg">
-                            <li className='mx-4 my-4'><Link to={"/"}>
-                                <p onClick={() => setActiveRoute("home")} className={`${(activeRoute === "home") && "text-green-600"} hover:text-green-600`}>{t("home")}</p>
-                            </Link></li>
-                            <li className='mx-4 my-4'><Link to={"/about"}>
-                                <p onClick={() => setActiveRoute("about")} className={`${(activeRoute === "about") && "text-green-600"} hover:text-green-600`}>{t("about")}</p>
-                            </Link></li>
-                            <li className='mx-4 my-4'><Link to={"/projects"}>
-                                <p onClick={() => setActiveRoute("projects")} className={`${(activeRoute === "projects") && "text-green-600"} hover:text-green-600`}>{t("projects")}</p>
-                            </Link></li>
-                            <li className='mx-4 my-4'><Link to={"/gallery"}>
-                                <p onClick={() => setActiveRoute("gallery")} className={`${(activeRoute === "gallery") && "text-green-600"} hover:text-green-600`}>{t("gallery")}</p>
-                            </Link></li>
-                            <li className='mx-4 my-4'><Link to={"/news"}>
-                                <p onClick={() => setActiveRoute("news")} className={`${(activeRoute === "news") && "text-green-600"} hover:text-green-600`}>{t("news")}</p>
-                            </Link></li>
-                            <li className='mx-4 my-4'><Link to={"/contact"}>
-                                <p onClick={() => setActiveRoute("contact")} className={`${(activeRoute === "contact") && "text-green-600"} hover:text-green-600`}>{t("contact")}</p>
-                            </Link></li>
+
+                            <li className='mx-4 my-4'>
+                                <Link to={"/"}>
+                                    <p onClick={() => setActiveRoute("home")} className={`${(activeRoute === "home") && "text-green-600"} hover:text-green-600`}>{t("home")}</p>
+                                </Link>
+                            </li>
+
+                            <li className='mx-4 my-4'>
+                                <Link to={"/about"}>
+                                    <p onClick={() => setActiveRoute("about")} className={`${(activeRoute === "about") && "text-green-600"} hover:text-green-600`}>{t("about")}</p>
+                                </Link>
+                            </li>
+
+                            <li className='mx-4 my-4'>
+                                <Link to={"/projects"}>
+                                    <p onClick={() => setActiveRoute("projects")} className={`${(activeRoute === "projects") && "text-green-600"} hover:text-green-600`}>{t("projects")}</p>
+                                </Link>
+                            </li>
+                            <li className='mx-4 my-4'>
+                                <Link to={"/shop"}>
+                                    <p onClick={() => setActiveRoute("shop")} className={`${(activeRoute === "shop") && "text-green-600"} hover:text-green-600`}>{t("shop")}</p>
+                                </Link>
+                            </li>
+
+                            <li className='mx-4 my-4'>
+                                <Link to={"/gallery"}>
+                                    <p onClick={() => setActiveRoute("gallery")} className={`${(activeRoute === "gallery") && "text-green-600"} hover:text-green-600`}>{t("gallery")}</p>
+                                </Link>
+                            </li>
+
+                            <li className='mx-4 my-4'>
+                                <Link to={"/news"}>
+                                    <p onClick={() => setActiveRoute("news")} className={`${(activeRoute === "news") && "text-green-600"} hover:text-green-600`}>{t("news")}</p>
+                                </Link>
+                            </li>
+
+                            <li className='mx-4 my-4'>
+                                <Link to={"/contact"}>
+                                    <p onClick={() => setActiveRoute("contact")} className={`${(activeRoute === "contact") && "text-green-600"} hover:text-green-600`}>{t("contact")}</p>
+                                </Link>
+                            </li>
+
+                            <li className='mx-4 my-4'>
+                                <Link to={"/dashboard"}>
+                                    <p onClick={() => setActiveRoute("dashboard")} className={`${(activeRoute === "dashboard") && "text-green-600"} hover:text-green-600`}>{t("dashboard")}</p>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
