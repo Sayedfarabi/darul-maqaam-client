@@ -18,23 +18,23 @@ const ContactSection = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                         <div className=''>
                             <label htmlFor="" id=''>Name :</label>
-                            <input type="text" id='' className='w-full border' />
+                            <input type="text" id='' className='w-full border bg-gray-50' />
                         </div>
                         <div>
                             <label htmlFor="" id=''>Email :</label>
-                            <input type="email" id='' className='w-full border' />
+                            <input type="email" id='' className='w-full border bg-gray-50' />
                         </div>
                         <div>
                             <label htmlFor="" id=''>Phone :</label>
-                            <input type="number" id='' className='w-full border' />
+                            <input type="number" id='' className='w-full border bg-gray-50' />
                         </div>
                         <div>
                             <label htmlFor="" id=''>Subject :</label>
-                            <input type="text" id='' className='w-full border' />
+                            <input type="text" id='' className='w-full border bg-gray-50' />
                         </div>
                         <div>
                             <label htmlFor="" id=''>Message :</label>
-                            <input type="text" id='' className='w-full border' />
+                            <input type="text" id='' className='w-full border bg-gray-50' />
                         </div>
                     </div>
                     <div>

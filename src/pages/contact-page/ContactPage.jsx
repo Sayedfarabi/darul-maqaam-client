@@ -1,11 +1,12 @@
 import React from 'react';
 import useTitle from '../../hooks/useTitle';
+import ContactSection from '../../components/contact-section/ContactSection';
 
 const ContactPage = () => {
     useTitle("Contact Page")
     return (
         <section>
-            <h1>This is contact page</h1>
+            <ContactSection></ContactSection>
         </section>
     );
 };
