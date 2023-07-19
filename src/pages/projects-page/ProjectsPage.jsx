@@ -5,8 +5,10 @@ import Publication from '../../components/publication/Publication';
 import InputSection from '../../components/input-section/InputSection';
 import VideoSection from '../../components/video-section/VideoSection';
 import SponsorsSection from '../../components/sponsors-section/SponsorsSection';
+import useTitle from '../../hooks/useTitle';
 
 const ProjectsPage = () => {
+    useTitle("Projects")
     return (
         <section>
             <OurProject></OurProject>

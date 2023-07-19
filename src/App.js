@@ -1,10 +1,12 @@
 import './App.css';
 import { RouterProvider } from 'react-router-dom';
 import { routes } from './routes/routes';
+import useTitle from './hooks/useTitle';
 
 function App() {
+  useTitle("Home")
   return (
-    <div className='max-w-[1400px] mx-auto'>
+    <div>
       <RouterProvider router={routes}>
       </RouterProvider>
     </div>

@@ -68,14 +68,14 @@ function DropdownProfile({
           onBlur={() => setDropdownOpen(false)}
         >
           <div className="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200 dark:border-slate-700">
-            <div className="font-medium text-slate-800 dark:text-slate-100">Acme Inc.</div>
+            <div className="font-medium text-slate-800 dark:text-slate-100">Darul Maaqam</div>
             <div className="text-xs text-slate-500 dark:text-slate-400 italic">Administrator</div>
           </div>
           <ul>
             <li>
               <Link
                 className="font-medium text-sm text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center py-1 px-3"
-                to="/settings"
+                to=""
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
                 Settings
@@ -84,7 +84,7 @@ function DropdownProfile({
             <li>
               <Link
                 className="font-medium text-sm text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center py-1 px-3"
-                to="/signin"
+                to=""
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
                 Sign Out

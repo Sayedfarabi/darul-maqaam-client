@@ -7,9 +7,10 @@ import image5 from '../../assets/images/images/image01.png';
 import image6 from '../../assets/images/images/image02.png';
 import image8 from '../../assets/images/images/maqaam-foundation.png';
 import ProjectCard from '../../components/project-card/ProjectCard';
+import useTitle from '../../hooks/useTitle';
 
 const NewsPage = () => {
-
+    useTitle("News Page")
     const data = [
         {
             _id: "project00001",

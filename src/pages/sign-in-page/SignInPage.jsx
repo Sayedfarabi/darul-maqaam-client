@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from '../../assets/images/brand/logo(1).png';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const SignInPage = () => {
+    useTitle("Sign In")
     return (
         <section className=''>
             <div className='py-4 text-center bg-green-600 text-2xl md:text-4xl text-white'>

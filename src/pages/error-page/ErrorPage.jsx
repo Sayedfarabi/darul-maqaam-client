@@ -1,9 +1,11 @@
 import React from 'react';
 import errorImage from "../../assets/images/error/error-image.png";
 import { Link, useRouteError } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ErrorPage = () => {
     const error = useRouteError();
+    useTitle("Error Page")
     return (
         <div className='flex justify-center items-center min-h-screen my-auto'>
             <div className='text-center'>

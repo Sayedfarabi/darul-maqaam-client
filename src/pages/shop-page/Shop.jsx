@@ -1,8 +1,10 @@
 import React from 'react';
 import Categories from '../../components/categories/Categories';
 import ProductCard from '../../components/product-card/ProductCard';
+import useTitle from '../../hooks/useTitle';
 
 const Shop = () => {
+    useTitle("Shop Page")
     return (
         <section>
             <div className="text-2xl flex-none md:flex justify-between py-10 md:py-16">

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-
+import logo from '../../assets/images/brand/logo.png';
 import SearchModal from '../components/ModalSearch';
 import Notifications from '../components/DropdownNotifications';
 import Help from '../components/DropdownHelp';
 import UserMenu from '../components/DropdownProfile';
 import ThemeToggle from '../components/ThemeToggle';
+import { Link } from 'react-router-dom';
 
 function Header({ sidebarOpen, setSidebarOpen }) {
   const [searchModalOpen, setSearchModalOpen] = useState(false);
@@ -13,10 +14,12 @@ function Header({ sidebarOpen, setSidebarOpen }) {
     <header className="sticky top-0 bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 z-30">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 -mb-px">
+
           {/* Header: Left side */}
           <div className="flex">
             {/* Hamburger button */}
-            <button
+
+            {/* <button
               className="text-slate-500 hover:text-slate-600 lg:hidden"
               aria-controls="sidebar"
               aria-expanded={sidebarOpen}
@@ -31,16 +34,19 @@ function Header({ sidebarOpen, setSidebarOpen }) {
                 <rect x="4" y="11" width="16" height="2" />
                 <rect x="4" y="17" width="16" height="2" />
               </svg>
-            </button>
+            </button> */}
+
+            <Link to={'/'}>
+              <img src={logo} className='w-32 h-18' alt="" />
+            </Link>
           </div>
 
           {/* Header: Right side */}
           <div className="flex items-center space-x-3">
-            <div>
+            {/* <div>
               <button
-                className={`w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600/80 rounded-full ml-3 ${
-                  searchModalOpen && 'bg-slate-200'
-                }`}
+                className={`w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600/80 rounded-full ml-3 ${searchModalOpen && 'bg-slate-200'
+                  }`}
                 onClick={(e) => {
                   e.stopPropagation();
                   setSearchModalOpen(true);
@@ -60,13 +66,16 @@ function Header({ sidebarOpen, setSidebarOpen }) {
                 </svg>
               </button>
               <SearchModal id="search-modal" searchId="search" modalOpen={searchModalOpen} setModalOpen={setSearchModalOpen} />
-            </div>
+            </div> */}
+
+
             <Notifications align="right" />
-            <Help align="right" />
-            <ThemeToggle />
+            {/* <Help align="right" /> */}
+            {/* <ThemeToggle /> */}
             {/*  Divider */}
             <hr className="w-px h-6 bg-slate-200 dark:bg-slate-700 border-none" />
             <UserMenu align="right" />
+
           </div>
         </div>
       </div>

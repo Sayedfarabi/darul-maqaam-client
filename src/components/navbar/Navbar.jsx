@@ -48,11 +48,7 @@ const Navbar = () => {
                                 <p onClick={() => setActiveRoute("projects")} className={`${(activeRoute === "projects") && "text-green-600"} hover:text-green-600`}>{t("projects")}</p>
                             </Link>
                             </li>
-                            <li><Link to={"/shop"}>
-                                <AiFillShopping className='inline mr-3'></AiFillShopping>
-                                <p onClick={() => setActiveRoute("shop")} className={`${(activeRoute === "shop") && "text-green-600"} hover:text-green-600`}>{t("shop")}</p>
-                            </Link>
-                            </li>
+
                             <li><Link to={"/gallery"}>
                                 <GrGallery className='inline mr-3'></GrGallery>
                                 <p onClick={() => setActiveRoute("gallery")} className={`${(activeRoute === "gallery") && "text-green-600"} hover:text-green-600`}>{t("gallery")}</p>
@@ -61,14 +57,19 @@ const Navbar = () => {
                                 <BiNews className='inline mr-3'></BiNews>
                                 <p onClick={() => setActiveRoute("news")} className={`${(activeRoute === "news") && "text-green-600"} hover:text-green-600`}>{t("news")}</p>
                             </Link></li>
+                            <li><Link to={"/shop"}>
+                                <AiFillShopping className='inline mr-3'></AiFillShopping>
+                                <p onClick={() => setActiveRoute("shop")} className={`${(activeRoute === "shop") && "text-green-600"} hover:text-green-600`}>{t("shop")}</p>
+                            </Link>
+                            </li>
                             <li><Link to={"/contact"}>
                                 <GrContactInfo className='inline mr-3'></GrContactInfo>
                                 <p onClick={() => setActiveRoute("contact")} className={`${(activeRoute === "contact") && "text-green-600"} hover:text-green-600`}>{t("contact")}</p>
                             </Link></li>
-                            <li><Link to={"/dashboard"}>
+                            {/* <li><Link to={"/dashboard"}>
                                 <AiFillDashboard className='inline mr-3'></AiFillDashboard>
                                 <p onClick={() => setActiveRoute("dashboard")} className={`${(activeRoute === "dashboard") && "text-green-600"} hover:text-green-600`}>{t("dashboard")}</p>
-                            </Link></li>
+                            </Link></li> */}
                         </ul>
 
 
@@ -96,7 +97,7 @@ const Navbar = () => {
                     <div className='text-xs'>
                         <p>
                             <GrMail className='text-green-600 inline'></GrMail>
-                            <span className='ml-1'>onfo@darulmaaqamfoundation.com</span>
+                            <span className='ml-1'>info@darulmaaqamfoundation.com</span>
                         </p>
                     </div>
                 </div>
@@ -139,11 +140,7 @@ const Navbar = () => {
                                     <p onClick={() => setActiveRoute("projects")} className={`${(activeRoute === "projects") && "text-green-600"} hover:text-green-600`}>{t("projects")}</p>
                                 </Link>
                             </li>
-                            <li className='mx-4 my-4'>
-                                <Link to={"/shop"}>
-                                    <p onClick={() => setActiveRoute("shop")} className={`${(activeRoute === "shop") && "text-green-600"} hover:text-green-600`}>{t("shop")}</p>
-                                </Link>
-                            </li>
+
 
                             <li className='mx-4 my-4'>
                                 <Link to={"/gallery"}>
@@ -158,16 +155,22 @@ const Navbar = () => {
                             </li>
 
                             <li className='mx-4 my-4'>
+                                <Link to={"/shop"}>
+                                    <p onClick={() => setActiveRoute("shop")} className={`${(activeRoute === "shop") && "text-green-600"} hover:text-green-600`}>{t("shop")}</p>
+                                </Link>
+                            </li>
+
+                            <li className='mx-4 my-4'>
                                 <Link to={"/contact"}>
                                     <p onClick={() => setActiveRoute("contact")} className={`${(activeRoute === "contact") && "text-green-600"} hover:text-green-600`}>{t("contact")}</p>
                                 </Link>
                             </li>
 
-                            <li className='mx-4 my-4'>
+                            {/* <li className='mx-4 my-4'>
                                 <Link to={"/dashboard"}>
                                     <p onClick={() => setActiveRoute("dashboard")} className={`${(activeRoute === "dashboard") && "text-green-600"} hover:text-green-600`}>{t("dashboard")}</p>
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
@@ -191,7 +194,9 @@ const Navbar = () => {
 
                     <div className='my-4 py-1'>
                         <div>
-                            <button className='capitalize px-4 py-1 text-sm text-white bg-green-600 rounded-lg'>{t("myAccount")}</button>
+                            <Link to={'/dashboard'}>
+                                <button className='capitalize px-4 py-1 text-sm text-white bg-green-600 rounded-lg'>{t("myAccount")}</button>
+                            </Link>
                         </div>
                     </div>
 
