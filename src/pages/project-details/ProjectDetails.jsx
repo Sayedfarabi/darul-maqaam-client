@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { TbCurrencyTaka } from 'react-icons/tb';
+import useTitle from '../../hooks/useTitle';
 
 const ProjectDetails = () => {
+    useTitle("Project Details");
     const [selectAmount, setSelectAmount] = useState();
     const [otherAmount, setOtherAmount] = useState(false);
     const [anyValueChecked, setAnyValueChecked] = useState(false);
