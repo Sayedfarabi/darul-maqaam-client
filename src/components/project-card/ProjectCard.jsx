@@ -19,7 +19,7 @@ const ProjectCard = ({ data, btnData, btnLink }) => {
                     </div>
                 </div>
                 <div className='mt-4'>
-                    <Link to={btnLink}>
+                    <Link to={'/projects/id'}>
                         <button className='py-1 px-4 text-white bg-green-600 capitalize text-xl md:text-2xl'>
                             {btnData}
                         </button>

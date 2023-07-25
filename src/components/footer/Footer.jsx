@@ -13,7 +13,7 @@ const Footer = () => {
     const { t } = useTranslation();
     return (
         <>
-            <section className='bg-green-500 py-8 md:py-12 px-2 md:px-6 lg:px-12 text-white'>
+            <section className='bg-green-600 py-8 md:py-12 px-2 md:px-6 lg:px-12 text-white'>
                 <footer className='grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4'>
 
                     <div className='mx-auto'>

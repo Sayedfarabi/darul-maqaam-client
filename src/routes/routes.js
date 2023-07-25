@@ -11,6 +11,7 @@ import SignInPage from "../pages/sign-in-page/SignInPage";
 import Dashboard from "../dashboard/pages/Dashboard";
 import Main from "../layout/dashboard/Main";
 import Shop from "../pages/shop-page/Shop";
+import ProjectDetails from "../pages/project-details/ProjectDetails";
 
 export const routes = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/projects",
                 element: <ProjectsPage></ProjectsPage>
+            },
+            {
+                path: "/projects/:id",
+                element: <ProjectDetails></ProjectDetails>
             },
             {
                 path: "/gallery",

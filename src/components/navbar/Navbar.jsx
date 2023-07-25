@@ -117,7 +117,7 @@ const Navbar = () => {
                         </p>
                         <p>
                             <GrMail className='text-green-600 inline'></GrMail>
-                            <span className='ml-1'>onfo@darulmaaqamfoundation.com</span>
+                            <span className='ml-1'>info@darulmaaqamfoundation.com</span>
                         </p>
                     </div>
                     <div>

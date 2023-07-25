@@ -68,7 +68,7 @@ const Projects = () => {
                             key={data?._id}
                             data={data}
                             btnData={"Donate"}
-                            btnLink={"/"}>
+                        >
 
                         </ProjectCard>
                     })
