@@ -13,8 +13,8 @@ const ProjectDetails = () => {
             <div className='py-4 text-center bg-green-600 text-2xl md:text-4xl text-white'>
                 <h1>Project Found</h1>
             </div>
-            <div className='py-4 md:py-8 mx-6 md:mx-12 flex'>
-                <div className='w-full md:w-1/2 mx-4'>
+            <div className='py-4 md:py-8 mx-6 md:mx-12 flex flex-col md:flex-row justify-between items-start'>
+                <div className='w-full md:w-1/2 mx-4 mb-6 md:mb-0'>
 
                     <iframe className='w-full h-80 rounded-md' src="https://www.youtube.com/embed/TEEjg43HRBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
