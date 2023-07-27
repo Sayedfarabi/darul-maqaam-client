@@ -2,6 +2,7 @@ import React from 'react';
 import { BiCartDownload } from 'react-icons/bi';
 import { GiLoveMystery } from 'react-icons/gi';
 import { BsFillEyeFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const ProductCard = () => {
 
@@ -26,9 +27,9 @@ const ProductCard = () => {
                         Dr. Kkhandakar
                     </h1>
                 </div>
+
                 <div>
                     <p className='text-lg italic text-white mt-6 opacity-100 transition-opacity duration-300'>
-
                         Salat Dowa and Zikir
                     </p>
                     <div className='flex justify-between items-center mt-2'>
@@ -69,10 +70,12 @@ const ProductCard = () => {
                                 className=' btn btn-sm text-2xl capitalize bg-green-500 hover:bg-green-600 duration-500 text-black hover:text-white mx-4'><BiCartDownload></BiCartDownload>
                             </button>
 
-                            <button
-                                className=' btn btn-sm text-2xl bg-slate-500 hover:bg-slate-600 capitalize text-black hover:text-white duration-500  mx-4'>
-                                <BsFillEyeFill></BsFillEyeFill>
-                            </button>
+                            <Link to={`/product/id`}>
+                                <button
+                                    className=' btn btn-sm text-2xl bg-slate-500 hover:bg-slate-600 capitalize text-black hover:text-white duration-500  mx-4'>
+                                    <BsFillEyeFill></BsFillEyeFill>
+                                </button>
+                            </Link>
                         </div>
                     }
 

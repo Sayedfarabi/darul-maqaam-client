@@ -12,6 +12,7 @@ import Dashboard from "../dashboard/pages/Dashboard";
 import Main from "../layout/dashboard/Main";
 import Shop from "../pages/shop-page/Shop";
 import ProjectDetails from "../pages/project-details/ProjectDetails";
+import ProductDetails from "../pages/product-details/ProductDetails";
 
 export const routes = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ export const routes = createBrowserRouter([
             {
                 path: "/shop",
                 element: <Shop></Shop>
+            },
+            {
+                path: "/product/:id",
+                element: <ProductDetails></ProductDetails>
             },
             {
                 path: "/contact",
