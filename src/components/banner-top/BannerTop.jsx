@@ -10,7 +10,7 @@ const BannerTop = () => {
     return (
         <div className='flex flex-col md:flex-row justify-center items-center py-8 md:py-12'>
             <div className='w-full md:w-1/2 mx-4 ml-8 md:ml-16 '>
-                <div>
+                <div className='mt-6'>
                     <h2 className='text-3xl md:text-5xl text-white font-semibold mb-2'>
                         Lets Create Something <br /> Great Together!
                     </h2>

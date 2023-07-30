@@ -67,6 +67,7 @@ const ProductCard = () => {
                         // user?.uid &&
                         <div className='w-full'>
                             <button
+                                onClick={() => window.cart_modal.showModal()}
                                 className=' btn btn-sm text-2xl capitalize bg-green-500 hover:bg-green-600 duration-500 text-black hover:text-white mx-4'><BiCartDownload></BiCartDownload>
                             </button>
 
