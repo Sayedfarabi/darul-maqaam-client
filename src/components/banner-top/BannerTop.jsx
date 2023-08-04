@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React from 'react';
 import item1 from '../../assets/images/images/hero/banner_slide01.png';
 import item2 from '../../assets/images/images/hero/banner_slide02.png';
@@ -5,11 +6,15 @@ import item3 from '../../assets/images/images/hero/banner_slide03.png';
 import icon1 from '../../assets/images/icons/Charlity.png';
 import icon2 from '../../assets/images/icons/Education.png';
 import icon3 from '../../assets/images/icons/Youtube.png';
+import Slide from './Slide';
+import Slider from './Slider';
+
 
 const BannerTop = () => {
+
     return (
-        <div className='flex flex-col md:flex-row justify-center items-center py-8 md:py-12'>
-            <div className='w-full md:w-1/2 mx-4 ml-8 md:ml-16 '>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-2 items-end py-8 md:py-12'>
+            <div className=' mx-4 ml-8 md:ml-16 '>
                 <div className='mt-6'>
                     <h2 className='text-3xl md:text-5xl text-white font-semibold mb-2'>
                         Lets Create Something <br /> Great Together!
@@ -58,11 +63,12 @@ const BannerTop = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-full md:w-1/2 mx-2 invisible md:visible'>
+            <div className='invisible md:visible'>
                 <div>
-                    <div className='mx-4'>
-                        <img src={item1} className='w-full mx-auto' alt="darul-maaqam-banner-item" />
-                    </div>
+
+                    <Slider></Slider>
+
+
                 </div>
             </div>
         </div>

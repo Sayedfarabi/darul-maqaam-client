@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Categories from '../../components/categories/Categories';
 import ProductCard from '../../components/product-card/ProductCard';
 import useTitle from '../../hooks/useTitle';
@@ -6,6 +6,7 @@ import CartModal from '../../components/cart-modal/CartModal';
 
 const Shop = () => {
     useTitle("Shop Page")
+    const [modalData, setModalData] = useState(false);
     return (
         <section>
             <div className="text-2xl flex-none md:flex justify-between py-10 md:py-16">
@@ -30,14 +31,51 @@ const Shop = () => {
                     </div>
                     <div className="bg-[#edf3f6] max-h-screen overflow-auto">
                         <div className="min-h-screen grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
-                            <ProductCard></ProductCard>
-                            <ProductCard></ProductCard>
-                            <ProductCard></ProductCard>
-                            <ProductCard></ProductCard>
-                            <ProductCard></ProductCard>
-                            <ProductCard></ProductCard>
-                            <ProductCard></ProductCard>
-                            <ProductCard></ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+                            <ProductCard
+                                setModalData={setModalData}
+                            >
+                            </ProductCard>
+
                         </div>
                     </div>
                 </div>
@@ -47,6 +85,7 @@ const Shop = () => {
                     </div>
                 </div>
             </div>
+
         </section>
     );
 };

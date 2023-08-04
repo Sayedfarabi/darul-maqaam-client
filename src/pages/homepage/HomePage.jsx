@@ -13,6 +13,7 @@ const HomePage = () => {
             <div>
                 <MakeThemSmile></MakeThemSmile>
             </div>
+
         </section>
     );
 };

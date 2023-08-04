@@ -4,10 +4,10 @@ import { GiLoveMystery } from 'react-icons/gi';
 import { BsFillEyeFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-const ProductCard = () => {
+const ProductCard = ({ setModalData }) => {
 
     return (
-        <div className="group relative item-center justify-center overflow-hidden cursor-default hover:shadow-xl hover:shadow-black/30 trans transition-shadow mx-auto rounded-md">
+        <div className="group relative item-center justify-center overflow-hidden cursor-default hover:shadow-xl hover:shadow-black/30 trans transition-shadow mx-auto rounded-md h-96 w-72">
             <div className="h-96 w-72">
                 <img className='h-full w-full object-cover group-hover:rotate-3 group-hover:scale-125 transition-transform duration-500 rounded-md' src="https://i.pinimg.com/originals/09/83/77/098377222318e9007d396bd78b6d6033.jpg" alt="Product" />
             </div>
@@ -68,8 +68,12 @@ const ProductCard = () => {
                         <div className='w-full'>
                             <button
                                 onClick={() => window.cart_modal.showModal()}
+
                                 className=' btn btn-sm text-2xl capitalize bg-green-500 hover:bg-green-600 duration-500 text-black hover:text-white mx-4'><BiCartDownload></BiCartDownload>
                             </button>
+
+
+
 
                             <Link to={`/product/id`}>
                                 <button
