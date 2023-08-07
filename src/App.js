@@ -6,7 +6,7 @@ import useTitle from './hooks/useTitle';
 function App() {
   useTitle("Home")
   return (
-    <div>
+    <div className='font-robotoSerif'>
       <RouterProvider router={routes}>
       </RouterProvider>
     </div>

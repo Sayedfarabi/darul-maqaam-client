@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      robotoSerif: ['Lobster', 'cursive']
+    }
   },
   plugins: [require("daisyui")],
 }

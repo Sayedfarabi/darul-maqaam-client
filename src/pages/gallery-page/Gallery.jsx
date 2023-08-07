@@ -3,6 +3,7 @@ import ProjectGallerySection from '../../components/project-gallery-section/Proj
 import ImagesSection from '../../components/images-section/ImagesSection';
 import ContactSection from '../../components/contact-section/ContactSection';
 import useTitle from '../../hooks/useTitle';
+import GoogleMap from '../../components/google-map/GoogleMap';
 
 const Gallery = () => {
     useTitle("Gallery Page")
@@ -11,6 +12,7 @@ const Gallery = () => {
             <ProjectGallerySection></ProjectGallerySection>
             <ImagesSection></ImagesSection>
             <ContactSection></ContactSection>
+            <GoogleMap></GoogleMap>
         </section>
     );
 };
