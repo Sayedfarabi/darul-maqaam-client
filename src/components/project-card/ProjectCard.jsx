@@ -12,8 +12,8 @@ const ProjectCard = ({ data, btnData, btnLink }) => {
                         </figure>
                     </div>
                     <div>
-                        <h3 className='text-2xl text-green-600'>{data?.title}</h3>
-                        <p className='text-sm'>
+                        <h3 className='text-2xl text-green-600 text-justify'>{data?.title}</h3>
+                        <p className='text-sm text-justify'>
                             {(data?.body.length) < 100 ? (data.body) : (data.body.slice(0, 99) + " ...")}
                         </p>
                     </div>

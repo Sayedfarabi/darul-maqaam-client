@@ -31,11 +31,18 @@ const Slider = () => {
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
-            navigation
+            // navigation
             pagination={{ clickable: true }}
-            Autoplay={{ enabled: true, delay: 3000 }}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            autoplay = {{
+                delay : 2000,
+                disableOnInteraction : false,
+                pauseOnMouseEnter : true,
+                reverseDirection : false,
+                stopOnLastSlide : false,
+                waitForTransition : false
+            }}
+            // onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
         >
             {
                 slidesData.map(data => {

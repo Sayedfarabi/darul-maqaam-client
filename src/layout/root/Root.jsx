@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../../components/navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from '../../components/footer/Footer';
+import MainNavbar from '../../components/main-navbar/MainNavbar';
 
 const Root = () => {
     return (
         <main>
             <section>
-                <Navbar></Navbar>
+                <MainNavbar/>
             </section>
             <section className='min-h-screen'>
                 <Outlet></Outlet>

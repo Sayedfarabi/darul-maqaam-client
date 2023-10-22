@@ -65,5 +65,4 @@ const MakeThemSmile = () => {
         </section>
     );
 };
-
 export default MakeThemSmile;

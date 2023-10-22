@@ -13,6 +13,7 @@ import Main from "../layout/dashboard/Main";
 import Shop from "../pages/shop-page/Shop";
 import ProjectDetails from "../pages/project-details/ProjectDetails";
 import ProductDetails from "../pages/product-details/ProductDetails";
+import DashboardHomepage from "../dashboard/pages/homepage/DashboardHomepage";
 
 export const routes = createBrowserRouter([
     {
@@ -65,13 +66,17 @@ export const routes = createBrowserRouter([
     },
     {
         path: "/dashboard",
+        errorElement: <ErrorPage></ErrorPage>,
         element: <Main></Main>,
         children: [
             {
                 path: "/dashboard",
-                errorElement: <ErrorPage></ErrorPage>,
                 element: <Dashboard></Dashboard>
-            }
+            },
+            {
+                path: "/dashboard/homepage",
+                element: <DashboardHomepage/>
+            },
         ]
     },
 ])

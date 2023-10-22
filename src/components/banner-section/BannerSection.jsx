@@ -14,14 +14,14 @@ const BannerSection = () => {
                     <div className='absolute top-0'>
                         <BannerTop></BannerTop>
                     </div>
-                    <div className='absolute bottom-4 md:bottom-60'>
+                    <div className='absolute bottom-4 md:bottom-80'>
                         <div className='flex flex-col md:flex-row justify-center items-center mx-4 md:mx-12'>
-                            <div className='w-28 md:w-48 h-20 md:h-24 w-full mx-auto md:w-1/4'>
+                            {/* <div className='h-20 md:h-24 w-full mx-auto md:w-1/4'>
                                 <img src={bannerLogo} className='w-32 h-24 mx-auto' alt="darul maaqam banner logo" />
-                            </div>
-                            <div className='w-full md:w-3/4'>
-                                <div className='w-full md:w-3/4'>
-                                    <p className='text-lg font-bold text-[#FFE600]'>
+                            </div> */}
+                            <div className='w-full '>
+                                <div className='w-full md:w-4/5 mx-auto'>
+                                    <p className='text-lg md:text-xl font-semibold text-[#FFE600]'>
                                         Darul Maqaam Foundation
                                     </p>
                                     <p className='text-xs md:text-sm text-gray-200 text-justify'>

@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      robotoSerif: ['Lobster', 'cursive']
+      robotoSerif: ['Lobster', 'cursive'],
+      latoSerif : ['Playfair Display', 'serif'],
+      sans: ['ui-sans-serif', 'system-ui'],
     }
   },
   plugins: [require("daisyui")],
